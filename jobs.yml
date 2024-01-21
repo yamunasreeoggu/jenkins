@@ -9,30 +9,30 @@
       community.general.jenkins_job:
         config: "{{ lookup('file', 'templates/job.xml') }}"
         name: exp_frontend
-        password: {{jenkins_password}}
-        url: {{jenkins_url}}
-        user: {{jenkins_user}}
+        password: "{{jenkins_password}}"
+        url: "{{jenkins_url}}"
+        user: '{{jenkins_user}}'
 
     - name: create jenkins jobs
       community.general.jenkins_job:
         config: "{{ lookup('file', 'templates/job.xml') }}"
         name: exp_backend
-        password: {{jenkins_password}}
-        url: {{jenkins_url}}
-        user: {{jenkins_user}}
+        password: "{{jenkins_password}}"
+        url: "{{jenkins_url}}"
+        user: "{{jenkins_user}}"
 
     - name: create jenkins jobs
       community.general.jenkins_job:
         config: "{{ lookup('file', 'templates/job.xml') }}"
         name: parameters
-        password: {{jenkins_password}}
-        url: {{jenkins_url}}
-        user: {{jenkins_user}}
+        password: "{{jenkins_password}}"
+        url: "{{jenkins_url}}"
+        user: "{{jenkins_user}}"
 
     - name: create jenkins jobs
       community.general.jenkins_job:
         config: "{{ lookup('file', 'templates/job.xml') }}"
         name: exp_terraform
-        password: {{jenkins_password}}
-        url: {{jenkins_url}}
-        user: {{jenkins_user}}
+        password: "{{jenkins_password}}"
+        url: "{{jenkins_url}}"
+        user: "{{jenkins_user}}"
