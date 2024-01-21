@@ -28,11 +28,10 @@
     <concurrentBuild>false</concurrentBuild>
     <builders>
         <hudson.tasks.Shell>
-            <command></command>
+            <command>ansible-playbook jobs.yml</command>
             <configuredLocalRules/>
         </hudson.tasks.Shell>
     </builders>
     <publishers/>
     <buildWrappers/>
 </project>
-
