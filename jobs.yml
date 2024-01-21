@@ -7,32 +7,40 @@
   tasks:
     - name: create jenkins jobs
       community.general.jenkins_job:
-        config: "{{ lookup('file', 'job.xml') }}"
-        name: exp_frontend
+        config: "{{ lookup('template', 'job.xml') }}"
+        name: exp-frontend
         password: "{{jenkins_password}}"
         url: "{{jenkins_url}}"
         user: '{{jenkins_user}}'
+      vars:
+        repo_name: exp_frontend
 
     - name: create jenkins jobs
       community.general.jenkins_job:
-        config: "{{ lookup('file', 'job.xml') }}"
-        name: exp_backend
+        config: "{{ lookup('template', 'job.xml') }}"
+        name: exp-backend
         password: "{{jenkins_password}}"
         url: "{{jenkins_url}}"
         user: "{{jenkins_user}}"
+      vars:
+        repo_name: exp_backend
 
     - name: create jenkins jobs
       community.general.jenkins_job:
-        config: "{{ lookup('file', 'job.xml') }}"
-        name: parameters
+        config: "{{ lookup('template', 'job.xml') }}"
+        name: exp-parameters
         password: "{{jenkins_password}}"
         url: "{{jenkins_url}}"
         user: "{{jenkins_user}}"
+      vars:
+        repo_name: parameters
 
     - name: create jenkins jobs
       community.general.jenkins_job:
-        config: "{{ lookup('file', 'job.xml') }}"
-        name: exp_terraform
+        config: "{{ lookup('template', 'job.xml') }}"
+        name: exp-terraform
         password: "{{jenkins_password}}"
         url: "{{jenkins_url}}"
         user: "{{jenkins_user}}"
+      vars:
+        repo_name: exp_terraform
