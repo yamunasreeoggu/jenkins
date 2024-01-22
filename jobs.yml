@@ -1,7 +1,7 @@
 - name: Create Jenkins jobs
   hosts: localhost
   vars:
-    jenkins_url: http://52.201.233.237:8080
+    jenkins_url: http://3.84.1.88:8080
     jenkins_user: admin
     jenkins_password: "{{ lookup('aws_ssm', 'jenkins_password', region='us-east-1' ) }}"
   tasks:
