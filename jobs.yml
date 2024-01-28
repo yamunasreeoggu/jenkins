@@ -14,6 +14,7 @@
         user: '{{jenkins_user}}'
       vars:
         repo_name: exp_frontend
+        auto_trigger: true
 
     - name: create jenkins jobs
       community.general.jenkins_job:
@@ -24,6 +25,7 @@
         user: "{{jenkins_user}}"
       vars:
         repo_name: exp_backend
+        auto_trigger: true
 
     - name: create jenkins jobs
       community.general.jenkins_job:
@@ -34,6 +36,7 @@
         user: "{{jenkins_user}}"
       vars:
         repo_name: parameters
+        auto_trigger: false
 
     - name: create jenkins jobs
       community.general.jenkins_job:
@@ -44,3 +47,4 @@
         user: "{{jenkins_user}}"
       vars:
         repo_name: exp_terraform
+        auto_trigger: false
