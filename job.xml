@@ -1,5 +1,6 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <flow-definition plugin="workflow-job@1348.v32a_a_f150910e">
+    <actions/>
     <description></description>
     <keepDependencies>false</keepDependencies>
     {% if auto_trigger == "true" %}
@@ -25,7 +26,7 @@
     </properties>
     {% else %}
     <properties/>
-    {% endif%}
+    {% endif %}
     <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@3802.vd42b_fcf00b_a_c">
         <scm class="hudson.plugins.git.GitSCM" plugin="git@5.2.0">
             <configVersion>2</configVersion>
