@@ -7,7 +7,7 @@
   tasks:
     - name: create jenkins jobs
       community.general.jenkins_job:
-        config: "{{ lookup('template', 'job.xml') }}"
+        config: "{{ lookup('template', 'mjob.xml') }}"
         name: exp-frontend
         password: "{{jenkins_password}}"
         url: "{{jenkins_url}}"
@@ -18,7 +18,7 @@
 
     - name: create jenkins jobs
       community.general.jenkins_job:
-        config: "{{ lookup('template', 'job.xml') }}"
+        config: "{{ lookup('template', 'mjob.xml') }}"
         name: exp-backend
         password: "{{jenkins_password}}"
         url: "{{jenkins_url}}"
